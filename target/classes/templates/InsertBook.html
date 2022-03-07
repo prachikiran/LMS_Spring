@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang=en xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Library Management System</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<h1 align=center style="color: black; text-decoration-style: wavy; font-family: cursive;">Add New Book</h1>
+		<hr>
+		<form action="#" th:action="@{/book/insert}" th:object="${book}" method="POST">
+			<input type="text" th:field="*{subject}" placeholder="Subject"
+				class="form-control mb-4 col-4" /><br> <input type="text"
+				th:field="*{title}" placeholder="Title"
+				class="form-control mb-4 col-4" /><br> <input type="text"
+				th:field="*{author}" placeholder="Author"
+				class="form-control mb-4 col-4" /><br> <input type="text"
+				th:field="*{publisher}" placeholder="Publisher"
+				class="form-control mb-4 col-4" /><br> <input type="text"
+				th:field="*{edition}" placeholder="Edition"
+				class="form-control mb-4 col-4" /><br> <input type="text"
+				th:field="*{price}" placeholder="MRP"
+				class="form-control mb-4 col-4" /><br> <input type="text"
+				th:field="*{quantity}" placeholder="Quantity"
+				class="form-control mb-4 col-4" /><br>		
+		</form>
+		<hr>
+		 <form:form method="POST" action="${pageContext.request.contextPath}/addEmployee" 
+      modelAttribute="index">
+		<form th:action="@{/book/insert}" method="POST">
+		  <input type="submit" value="Insert" align="center"/>
+		 <form th:action="@{/home}" method="GET" align="center">
+		  <input type="submit" value="Go Back" /></form>	
+	</div>
+</body>
+</html>
