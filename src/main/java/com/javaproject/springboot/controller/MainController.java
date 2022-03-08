@@ -30,7 +30,7 @@ public class MainController {
     @GetMapping(value = "/")
     public String homePage(Model model) {
  
-        ModelAndView homepage = new ModelAndView();
+ //       ModelAndView homepage = new ModelAndView();
         homepage.setViewName("index.html");
         return "index";
     }
