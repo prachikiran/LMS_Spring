@@ -1,8 +1,9 @@
 package com.javaproject.springboot.controller;
 
-import org.springframework.beans.factory.annotation.Autowired; 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.javaproject.springboot.design.BookStack;
 import com.javaproject.springboot.services.ServiceClass;
@@ -24,6 +26,14 @@ public class MainController {
 
     @Autowired
     private ServiceClass libService;
+
+    @GetMapping(value = "/")
+    public ModelAndView homePage(Model model) {
+ 
+        ModelAndView homepage = new ModelAndView();
+        homepage.setViewName("index.html");
+        return homepage;
+    }
 
     @GetMapping("/book/display")
     public ResponseEntity<List<BookStack>> displayList() {

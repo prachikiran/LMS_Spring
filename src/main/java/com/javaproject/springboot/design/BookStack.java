@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "library_operation")
+@Table(name = "new_library")
 public class BookStack {
 
     @Id
