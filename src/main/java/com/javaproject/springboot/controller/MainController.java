@@ -28,11 +28,11 @@ public class MainController {
     private ServiceClass libService;
 
     @GetMapping(value = "/")
-    public ModelAndView homePage(Model model) {
+    public String homePage(Model model) {
  
         ModelAndView homepage = new ModelAndView();
         homepage.setViewName("index.html");
-        return homepage;
+        return "index";
     }
 
     @GetMapping("/book/display")
