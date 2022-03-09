@@ -8,9 +8,9 @@ public interface LibServiceInterface {
 
 	public List<BookStack> getBookList();
 
-	public void insertBook(BookStack bookName);
+	public void insertBook(BookStack book);
 
-	public BookStack updateBook(BookStack bookName);
+	public BookStack updateBook(BookStack book);
 
 	public BookStack getId(int bookId);
 

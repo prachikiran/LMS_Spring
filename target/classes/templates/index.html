@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang=en xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
 <title>Library Management System</title>
@@ -37,10 +37,9 @@
 					<td th:text="${lms.quantity}"></td>
 					<td align=left>
 
-					<a th:href="@{/library/book/insert}"
-						class="btn btn-primary" "style=margin:40px;">Add Book</a>
-						<a th:href="@{/book/delete/{id}(id=${bookID})}"
-						class="btn btn-danger"> Delete Book</a>
+					<a th:href="@{/addBook}" class="btn btn-primary">Add New</a>
+					<a th:href="@{/book/update/{id}(id=${bookID})}" class="btn btn-warning">Update</a>
+					<a th:href="@{/book/remove/{id}(id=${bookID})}" class="btn btn-danger"> Delete</a>
 						</td>
 				</tr>
 			</tbody>

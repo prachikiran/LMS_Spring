@@ -29,7 +29,7 @@
 				class="form-control mb-4 col-4" /><br>		
 		</form>
 		<hr>
-		<form action="#" th:action="@{/book/insert}" th:object= newBook method="POST">
+		<form action="#" th:action="@{/book/insert_new}" modelAttribute="newBook" th:object= newBook method="POST">
 		  <input type="submit" value="Insert" align="center"/>
 		 <form th:action="@{/}" method="GET" align="center">
 		  <input type="submit" value="Go Back" /></form>	

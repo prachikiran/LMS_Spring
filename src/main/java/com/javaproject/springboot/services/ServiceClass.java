@@ -21,13 +21,13 @@ public class ServiceClass implements LibServiceInterface {
     }
 
     @Override
-    public void insertBook(BookStack bookName) {
-        this.libRepository.save(bookName);
+    public void insertBook(BookStack book) {
+        this.libRepository.save(book);
     }
 
     @Override
-    public BookStack updateBook(BookStack bookName) {
-        return libRepository.save(bookName);
+    public BookStack updateBook(BookStack book) {
+        return libRepository.save(book);
     }
 
     @Override
